@@ -3,10 +3,10 @@
 // 🏡 Task 1: Variables
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
-const principal = 200000
-const interestRate = 0.05
-const years = 30
-
+const p = 200000
+const i = 0.05
+const y = 30
+const name = 'Tim'
 
 
 
@@ -17,8 +17,8 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 
 Create another variable called `periods` and give it the value of years*12.
 */
-const monthlyInterestRate = interestRate/12
-const periods = years*12
+const mIr = i/12
+const per = y*12
 
 
 
@@ -34,7 +34,10 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
-
+const Num = Math.pow(mIr + 1, per) *mIr
+const Den = Math.pow(mIr + 1, per) -1
+const M = p* (Num/ Den)
+console.log(M);
 
 
 // 🏡 Task 3: Function
@@ -42,7 +45,21 @@ When your math is correct, monthlyRate will equal 1073.64
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
+function mortgageCalculator(){
+    const p = 200000
+const i = 0.05
+const y = 30
+const name = 'Tim'
+    const mIr = i/12
+const per = y*12
 
+    const Num = Math.pow(mIr + 1, per) *mIr
+    const Den = Math.pow(mIr + 1, per) -1
+    const M = p* (Num/ Den)
+    console.log(M);
+console.log('(Name), your monthly rate is $(M)');
+}
+mortgageCalculator();
 
 
 
