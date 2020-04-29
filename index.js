@@ -45,21 +45,10 @@ console.log(M);
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
-function mortgageCalculator(){
-    const p = 200000
-const i = 0.05
-const y = 30
-const name = 'Tim'
-    const mIr = i/12
-const per = y*12
-
-    const Num = Math.pow(mIr + 1, per) *mIr
-    const Den = Math.pow(mIr + 1, per) -1
-    const M = p* (Num/ Den)
-    console.log(M);
-console.log('(Name), your monthly rate is $(M)');
+function mortgageCalculator(Name,M){
+return '(Name), your monthly rate is $(M)'
 }
-mortgageCalculator();
+mortgageCalculator('Tim', 1873.64);
 
 
 
