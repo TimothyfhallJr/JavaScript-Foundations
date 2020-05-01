@@ -108,22 +108,21 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
-function variableletInterestRate(principle, interest, years, name){
-    let adjustedInterest = interest;
-    
- let interestRate = interestRate - 0.02;
+function variableInterestRate(principle, interest, years, name){
+ let interest_rate = interest - 0.02;
 for (let i = 0; i < 10; i++){
-let monthlyInterestRate = adjustedInterest / 12;
+let monthlyInterestRate = interest_rate / 12;
  let periods = years * 12;
  let numerator= monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
  let denominator= Math.pow((1 + monthlyInterestRate), periods) -1;
  const monthlyRate = principle * (numerator/denominator);
-let message= name  + ',with an interest rate of'+ interest_rate.toFixed(3) + 'yourmonthly rate is $' + monthlyRate.toFixed(2) + '.';
-interstRate += 0.005;
+let message= name  + ',with an interest rat of'+ interest_rate.toFixed(3) + 'yourmonthly rate is $' + monthlyRate.toFixed(2) + '.';
+interest_rate += 0.005;
 console.log(message);
 }
 }
-let output = variableInterestRate(20000, 0.04, 30, "Tim");
+let output = variableInterestRate
+(20000, 0.04, 30, "Tim");
 console.log(output)
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
